@@ -1,0 +1,15 @@
+runtime: aspnetcore
+env: standard
+
+instance_class: F2
+
+handlers:
+- url: /(.+)
+  static_files: wwwroot/\1
+  upload: wwwroot/.*
+
+- url: /favicon.ico
+  static_files: wwwroot/favicon.ico
+  upload: wwwroot/favicon.ico
+
+entrypoint: dotnet Lab45.dll
