@@ -9,7 +9,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 // Çàì³íà UseSqlServer íà UseNpgsql äëÿ PostgreSQL
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlite("Data Source=/tmp/app.db"));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
